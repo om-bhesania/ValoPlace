@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    --main-font: 'Jost', sans-serif;
+}
+
+body,
+html {
+    height: 100vh;
+    font-size: 62.5%;
+    position: relative;
+}
+
+body {
+    background: url(../assets/bg.png)no-repeat;
+}
+
+/* nav {
+    background: rgba(0, 0, 0, 0.137);    
+} */
+
+a {
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+li {
+    list-style: none;
+}
+
+li>a {
+    font-size: 20px;
+}
+
+.is-sticky {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+    box-shadow: 0 2px 24px 0 rgb(0 0 0 / 15%);
+    background-color: #ffffff !important;
+    animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+    padding-top: 0px;
+    padding-bottom: 0px;
+}
+
+h1>a {
+    font-family: var(--main-font);
+    font-size: 50px;
+    color: #ffffff;
+}
+
+.wrapper {
+    width: 100%;
+    height: 10rem;
+    display: grid;
+    grid-template-columns: 5rem 1fr 1fr 2fr 10rem;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+.logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    grid-column: 2/3;
+}
+
+.nav-links {
+    grid-column: 4/4;
+}
+
+.nav-links ul {
+
+    height: 10rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.nav-links ul #link {
+    color: rgb(255, 255, 255);
+    font-weight: 600;
+    font-family: 'Jost', sans-serif;
+    display: inline-block;
+    position: relative;
+}
+
+.nav-links ul #link:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color:
+        #F05151;
+    transform-origin: bottom center;
+    transition: transform 0.25s ease-out;
+}
+
+.nav-links ul #link:hover:after {
+    transform: scaleX(1);
+    transform-origin: bottom center;
+}
+
+.btn-cta {
+    font-family: var(--main-font);
+    cursor: pointer;
+    font-size: 17px;
+    font-weight: 700;
+    color: #ffffff;
+    display: inline-block;
+    position: relative;
+    height: 35px;
+    width: 150px;
+    border: 2px solid #F05151;
+    border-radius: 7px;
+    background: transparent;
+}
+
+#cta button:after {
+    font-size: 17px;
+    font-family: var(--main-font);
+    font-weight: 700;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    content: 'Buy Now';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    transform: scaleX(0);
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: #F05151;
+    transform-origin: right center;
+    transition: transform 0.25s ease-out;
+}
+
+#cta button:hover:after {
+    transform: scaleX(1);
+    transform-origin: left center;
+}
+
+.container {
+    position: relative;
+    top: 200px;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    display: grid;
+    grid-template-rows:  2fr 1fr 1fr ;
+    height: 100%;
+    max-width: 50%;
+}
+.big-h{
+    grid-row: 1/2;
+    
+}
+.container h1 {
+    position: relative;
+    font-size: 100px;
+    color: #F05151;
+}
+
+.container h1>span {
+    color: #ffff;
+}
+.para{
+    grid-row: 2/3;
+}
+.container p {
+    position: relative;
+    display: flex;
+    
+    justify-content: center;
+    color: #ffffff;
+    font-size: 19px;
+    text-align: justify;
+}
+
+.btns {
+    position: relative;
+    top: 20px;
+    color: #ffffff;
+    font-size: 20px;
+    text-align: justify;  
+}
+
+.hero-cta {
+    margin-right: 30px;
+    background-color: #F05151;
+    color: #ffffff;
+    font-size: 20px;
+    height: 45px;
+    width: 200px;
+    border-radius: 6px;
+    cursor: pointer;
+    border: none;
+}
+
+.hero-cta:hover {
+    cursor: pointer;
+    transform: scale(0.95);
+}
+
+.border-cta {
+    position: relative;
+    /* margin: auto 3rem; */
+    background-color: transparent;
+    color: #ffffff;
+    font-size: 18px;
+    height: 45px;
+    width: 200px;
+    border-radius: 6px;
+    border: 2px solid #F05151;
+}
+
+.border-cta:after {
+    position: absolute;
+    font-family: var(--main-font);
+    font-weight: 700;
+    color: white;
+    text-align: center;
+    height: 100%;
+    width: 100%;
+    left: 0.2px;
+    bottom: 0;
+    position: absolute;
+    content: 'Know More';
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scaleX(0);
+    background-color: #F05151;
+    transform-origin: right center;
+    transition: transform 0.25s ease-out;
+}
+
+.border-cta:hover:after {
+    cursor: pointer;
+    transform: scaleX(1);
+    transform-origin: left center;
+}
