@@ -1,8 +1,10 @@
 import React from 'react';
-
-const hero = () => {
+import './bg.css'
+import './main.css'
+const home = () => {
   return (
     <>
+
 <div className="container">
     <div className="big-h">
       <h1>Want <span>Skins</span>?</h1>
@@ -22,4 +24,4 @@ const hero = () => {
   )
 }
 
-export default hero
+export default home
